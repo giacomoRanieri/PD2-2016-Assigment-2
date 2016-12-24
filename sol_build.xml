@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project basedir="." default="generate-artifacts" name="NFFG-2">
+	<description>
+		Script for building JAXRS
+	</description>
+
+	<taskdef name="wjc" classname="org.jvnet.ws.wadl2java.WJCTask">
+		<classpath>
+			<fileset dir="${lib.dir}" includes="*.jar" />
+		</classpath>
+	</taskdef>
+
+	<target name="generate-artifacts">
+		<echo message="Compiling the descriptions..." />
+		<wjc description="${WADL}" package="it.polito.dp2.NFFG.sol2.jaxrs"
+			 autoSchemaPackage="false" target="${gen.dir}">
+			<customizations dir="${lab2.location}" includes="binding.xjc"/>
+			<produces dir="${gen.dir}/it/polito/dp2/NFFG/sol2/jaxrs" includes="*.java"/>
+			<depends dir="${lab2.location}" includes="build.xml"/>
+		</wjc>
+	</target>
+</project>

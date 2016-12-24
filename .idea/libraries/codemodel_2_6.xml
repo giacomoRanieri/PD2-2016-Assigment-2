@@ -1,0 +1,45 @@
+<component name="libraryTable">
+  <library name="codemodel-2.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/codemodel-2.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hk2-api-2.5.0-b05.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hk2-locator-2.5.0-b05.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/hk2-utils-2.5.0-b05.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-annotations-2.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-2.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-core-asl-1.9.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-databind-2.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jackson-mapper-asl-1.9.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.annotation-api-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.inject-2.5.0-b05.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.ws.rs-api-2.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jaxb-api-2.2.12-b140109.1041.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jaxb-api-2.2.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jaxb-core-2.2.10-b140310.1920.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jaxb-runtime-2.2.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jaxb-xjc-2.2.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jersey-client-1.19.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jersey-client.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jersey-common.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jersey-core-1.19.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jersey-guava-2.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jersey-media-jaxb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/json-simple-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsonschema2pojo-core-0.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsr311-api-0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/junit-4.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/lab2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/NFFG.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/NFFGRandom.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/validation-api-1.1.0.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wadl-ant-1.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wadl-core-1.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/wadl-xslt-1.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/xsom-20140925.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/jaxb-xjc-2.2.10.jar!/" />
+    </SOURCES>
+  </library>
+</component>
