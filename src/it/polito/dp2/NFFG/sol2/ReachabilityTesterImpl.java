@@ -22,6 +22,9 @@ import java.util.Set;
  */
 public class ReachabilityTesterImpl implements ReachabilityTester {
 
+	private final String NAME_PROP = "name";
+	private final String LINK_TYPE = "Link";
+
 	private String currentGraphName;
 	private NffgVerifier verifier;
 	private Resource resource;
@@ -39,7 +42,6 @@ public class ReachabilityTesterImpl implements ReachabilityTester {
 		currentGraphName = name;
 		nodeMap = new HashMap<>();
 
-		String res;
 		NffgReader nffg = verifier.getNffg(name);
 		if (nffg == null) {
 			currentGraphName = null;
@@ -50,14 +52,12 @@ public class ReachabilityTesterImpl implements ReachabilityTester {
 		//deleting all nodes
 		Resource.Nodes nodesCall = resource.nodes();
 		try {
-			res = nodesCall.deleteAsXml(String.class);
+			nodesCall.deleteAsXml(String.class);
 		} catch (WebApplicationException ex) {
 			currentGraphName = null;
 			nodeMap = null;
 			throw new ServiceException("Unable to delete nodes", ex);
 		}
-
-		System.out.println("Delete nodes result: " + res);
 
 		//adding all nodes
 
@@ -65,12 +65,16 @@ public class ReachabilityTesterImpl implements ReachabilityTester {
 
 		Set<NodeReader> nodes = nffg.getNodes();
 		for (NodeReader noder : nodes) {
+			//For each node of the graph
+			//Create a JAXRS node
 			Node node = objFac.createNode();
+			//Set the property
 			List<Property> props = node.getProperty();
 			Property nameProp = new Property();
-			nameProp.setName("name");
+			nameProp.setName(NAME_PROP);
 			nameProp.setValue(noder.getName());
 			props.add(nameProp);
+			//Load the node into Neo4J
 			try {
 				Node resp = nodeCall.postXmlAsNode(node);
 				nodeMap.put(noder, resp);
@@ -84,20 +88,22 @@ public class ReachabilityTesterImpl implements ReachabilityTester {
 		//adding all relationship
 
 		for (NodeReader source : nodeMap.keySet()) {
+			//For each node of the graph
+			//define the source Node
 			Node sourceNode = nodeMap.get(source);
 
 			for (LinkReader link : source.getLinks()) {
+				//For each link of the source node
 				NodeReader dest = link.getDestinationNode();
 				Node destNode = nodeMap.get(dest);
 
 				Resource.NodeNodeidRelationship putRelationCall = resource.nodeNodeidRelationship(sourceNode.getId());
 
 				Relationship relation = objFac.createRelationship();
-				relation.setType("link");
+				relation.setType(LINK_TYPE);
 				relation.setDstNode(destNode.getId());
 				try {
 					putRelationCall.postXmlAsRelationship(relation);
-					System.out.println("Link: \"" + source.getName() + "\" and \"" + dest.getName() + "\"");
 				} catch (WebApplicationException ex) {
 					currentGraphName = null;
 					nodeMap = null;
