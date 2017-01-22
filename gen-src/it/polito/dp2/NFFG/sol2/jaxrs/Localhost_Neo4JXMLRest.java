@@ -18,7 +18,7 @@ import com.sun.jersey.api.uri.UriTemplate;
 
 @Generated(value = {
     "wadl|http://localhost:8080/Neo4JXML/rest/application.wadl"
-}, comments = "wadl2java, http://wadl.java.net", date = "2016-12-26T12:08:32.447+01:00")
+}, comments = "wadl2java, http://wadl.java.net", date = "2017-01-09T17:50:48.123+01:00")
 public class Localhost_Neo4JXMLRest {
 
     /**
@@ -130,32 +130,32 @@ public class Localhost_Neo4JXMLRest {
             return new Localhost_Neo4JXMLRest.Resource.NodeNodeidLabel(_client, _uriBuilder.buildFromMap(_templateAndMatrixParameterValues), nodeid);
         }
 
+        public Localhost_Neo4JXMLRest.Resource.Relationship relationship() {
+            return new Localhost_Neo4JXMLRest.Resource.Relationship(_client, _uriBuilder.buildFromMap(_templateAndMatrixParameterValues));
+        }
+
         public Localhost_Neo4JXMLRest.Resource.RelationshipRelationshipid relationshipRelationshipid(String relationshipid) {
             return new Localhost_Neo4JXMLRest.Resource.RelationshipRelationshipid(_client, _uriBuilder.buildFromMap(_templateAndMatrixParameterValues), relationshipid);
-        }
-
-        public Localhost_Neo4JXMLRest.Resource.NodeNodeidLabelLabelid nodeNodeidLabelLabelid(String nodeid, String labelid) {
-            return new Localhost_Neo4JXMLRest.Resource.NodeNodeidLabelLabelid(_client, _uriBuilder.buildFromMap(_templateAndMatrixParameterValues), nodeid, labelid);
-        }
-
-        public Localhost_Neo4JXMLRest.Resource.NodeNodeId nodeNodeId(String nodeid) {
-            return new Localhost_Neo4JXMLRest.Resource.NodeNodeId(_client, _uriBuilder.buildFromMap(_templateAndMatrixParameterValues), nodeid);
         }
 
         public Localhost_Neo4JXMLRest.Resource.Node node() {
             return new Localhost_Neo4JXMLRest.Resource.Node(_client, _uriBuilder.buildFromMap(_templateAndMatrixParameterValues));
         }
 
-        public Localhost_Neo4JXMLRest.Resource.Nodes nodes() {
-            return new Localhost_Neo4JXMLRest.Resource.Nodes(_client, _uriBuilder.buildFromMap(_templateAndMatrixParameterValues));
+        public Localhost_Neo4JXMLRest.Resource.NodeNodeId nodeNodeId(String nodeid) {
+            return new Localhost_Neo4JXMLRest.Resource.NodeNodeId(_client, _uriBuilder.buildFromMap(_templateAndMatrixParameterValues), nodeid);
+        }
+
+        public Localhost_Neo4JXMLRest.Resource.NodeNodeidLabelLabelid nodeNodeidLabelLabelid(String nodeid, String labelid) {
+            return new Localhost_Neo4JXMLRest.Resource.NodeNodeidLabelLabelid(_client, _uriBuilder.buildFromMap(_templateAndMatrixParameterValues), nodeid, labelid);
         }
 
         public Localhost_Neo4JXMLRest.Resource.NodeNodeidRelationship nodeNodeidRelationship(String nodeid) {
             return new Localhost_Neo4JXMLRest.Resource.NodeNodeidRelationship(_client, _uriBuilder.buildFromMap(_templateAndMatrixParameterValues), nodeid);
         }
 
-        public Localhost_Neo4JXMLRest.Resource.Relationship relationship() {
-            return new Localhost_Neo4JXMLRest.Resource.Relationship(_client, _uriBuilder.buildFromMap(_templateAndMatrixParameterValues));
+        public Localhost_Neo4JXMLRest.Resource.Nodes nodes() {
+            return new Localhost_Neo4JXMLRest.Resource.Nodes(_client, _uriBuilder.buildFromMap(_templateAndMatrixParameterValues));
         }
 
         public static class Node {
